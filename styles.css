@@ -5,8 +5,8 @@
   --line: rgba(255, 255, 255, 0.12);
   --text: #f4f1ec;
   --muted: #a39c96;
-  --red: #fe4c3c;
-  --red-dim: rgba(254, 76, 60, 0.16);
+  --red: #E10600;
+  --red-dim: rgba(225, 6, 0, 0.16);
   --max: 1120px;
   --nav: 76px;
 }
@@ -50,7 +50,7 @@ a:hover { color: var(--red); }
   align-items: center;
   padding: 72px 0 88px;
   background:
-    radial-gradient(900px 480px at 80% 20%, rgba(254, 76, 60, 0.18), transparent 60%),
+    radial-gradient(900px 480px at 80% 20%, rgba(225, 6, 0, 0.18), transparent 60%),
     linear-gradient(#050505, #090909);
 }
 .hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 48px; align-items: center; }
@@ -75,21 +75,19 @@ h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-w
   border-radius: 999px;
   border: 1px solid var(--red);
   background: var(--red);
-  color: #140605;
+  color: #fff;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 14px;
 }
 .btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
-.btn:hover { filter: brightness(1.08); color: #140605; }
+.btn:hover { filter: brightness(1.08); color: #fff; }
 .btn.ghost:hover { color: var(--text); border-color: var(--text); }
 .hero-mark {
   justify-self: end;
   width: min(320px, 100%);
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  background: #000 url("assets/logo.png") center / 78% no-repeat;
+  height: auto;
 }
 
 .band {
@@ -114,8 +112,11 @@ section { padding: 96px 0; }
   background: #000;
 }
 .game-art {
-  background: #000 url("assets/redline.jpg") right center / cover no-repeat;
+  width: 100%;
+  height: 100%;
   min-height: 420px;
+  object-fit: contain;
+  padding: 48px;
 }
 .game-copy { padding: 72px 56px; display: flex; flex-direction: column; justify-content: center; }
 .game-copy h2 { font-size: clamp(56px, 7vw, 88px); line-height: 0.9; text-transform: uppercase; }
