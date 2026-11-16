@@ -2,4 +2,6 @@
 
 ![Obi Games Studio](assets/logo.png)
 
-Landing page for Obi Games Studio, established in 2022 in Casablanca, Morocco. Open `index.html`.
+Website for Obi Games Studio, Casablanca. Open `index.html`.
+
+The upcoming game is Ashfall: The Beginning. The store is `store.html`. The Windows launcher is `downloads/Obi-Games-Launcher.exe`.
