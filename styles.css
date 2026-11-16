@@ -1,8 +1,10 @@
 :root {
-  --bg: #050505;
-  --ink: #f3f0ea;
-  --muted: #9c968e;
-  --line: rgba(255, 255, 255, 0.14);
+  --bg: #000;
+  --ink: #f2f2f2;
+  --muted: #a3a3a3;
+  --card: #1a1a1a;
+  --well: #2a2a2a;
+  --line: #2c2c2c;
   --red: #fe4c3c;
 }
 
@@ -13,103 +15,146 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.5;
 }
-img { display: block; }
+img { display: block; max-width: 100%; }
 a { color: inherit; }
 a:hover { color: var(--red); }
 
-.topbar, .site-header, main, .footer { width: min(980px, calc(100% - 40px)); margin: 0 auto; }
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  font-size: 13px;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line);
+.bar, main, .site-foot {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
 }
 
-.site-header {
+.bar {
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding: 16px 0;
-}
-.logo-lockup { display: block; text-decoration: none; }
-.logo-lockup img { height: 46px; width: auto; }
-.site-header nav { display: flex; gap: 18px; }
-.site-header nav a { text-decoration: none; }
-.download {
-  margin-left: auto;
-  text-decoration: none;
-  color: var(--red);
-  border: 1px solid var(--red);
-  padding: 8px 12px;
-  font-size: 14px;
-}
-.download:hover { color: #fff; background: var(--red); }
-
-.intro { padding: 54px 0 28px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: center; }
-.intro h1 {
-  font-family: Georgia, "Iowan Old Style", Palatino, serif;
-  font-weight: 500;
-  font-size: 52px;
-  line-height: 1.05;
-  margin: 0 0 14px;
-}
-.intro p { margin: 0; max-width: 38em; }
-.mark-note { color: var(--muted); font-size: 14px; }
-.mark-note img { width: 180px; height: auto; margin-bottom: 8px; }
-
-.rule { border: 0; border-top: 1px solid var(--line); margin: 8px 0 0; }
-
-.block { padding: 36px 0; }
-.block h2 {
-  font-family: Georgia, "Iowan Old Style", Palatino, serif;
-  font-weight: 500;
-  font-size: 28px;
-  margin: 0 0 8px;
-}
-.meta { color: var(--red); margin: 0 0 14px; font-size: 15px; }
-
-table { width: 100%; border-collapse: collapse; }
-th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-th { font-size: 13px; color: var(--muted); font-weight: 600; }
-td a { font-weight: 600; color: var(--red); }
-
-.note { color: var(--muted); font-size: 15px; }
-
-.footer {
-  margin-top: 20px;
-  padding: 28px 0 40px;
-  border-top: 1px solid var(--line);
-}
-.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; }
-.footer h3 { margin: 0 0 8px; font-size: 14px; color: var(--red); }
-.footer ul { list-style: none; margin: 0; padding: 0; }
-.footer li { margin: 5px 0; }
-.footer a { text-decoration: none; }
-.footer p { margin: 4px 0; color: var(--muted); font-size: 14px; }
-.fine {
-  margin-top: 28px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
-  display: flex;
   justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
+  padding: 28px 0 8px;
 }
-.page { padding: 36px 0 64px; }
-.page h1 { font-family: Georgia, serif; font-weight: 500; font-size: 40px; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand img { height: 26px; width: auto; }
+.brand-name { height: 13px; }
+.bar nav { display: flex; gap: 28px; }
+.bar nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+}
+.bar nav a:hover { color: var(--red); }
+
+.hero {
+  text-align: center;
+  padding: 88px 0 36px;
+}
+.hero-mark {
+  width: 148px;
+  height: auto;
+  margin: 0 auto 28px;
+}
+.hero h1 { margin: 0; }
+.hero h1 img {
+  width: min(460px, 86%);
+  height: auto;
+  margin: 0 auto;
+}
+.tagline {
+  margin: 22px 0 26px;
+  color: #d7d7d7;
+  font-size: 16px;
+}
+.cta {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 15px;
+}
+.cta:hover { color: #fff; background: #ff6558; }
+
+.band {
+  padding: 56px 0 8px;
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+}
+#games { border-top: 0; margin-top: 72px; padding-top: 12px; }
+.band h2 {
+  margin: 0 0 22px;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.band p { margin: 0 0 10px; color: #c8c8c8; max-width: 40em; }
+.band a { color: var(--ink); }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.card {
+  background: var(--card);
+  padding: 14px 14px 16px;
+}
+.card-art {
+  background: var(--well);
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+}
+.card-art img { width: 54px; height: auto; }
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.card-links { display: flex; gap: 14px; margin-top: 10px; }
+.card-links a { color: var(--red); text-decoration: none; font-size: 14px; }
+.card-links a:hover { color: #fff; }
+
+.site-foot {
+  margin-top: 64px;
+  padding: 22px 0 48px;
+  border-top: 1px solid var(--line);
+  color: #8d8d8d;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.site-foot p { margin: 0; }
+.legal { margin-top: 8px; letter-spacing: 0; }
+.legal a { color: #8d8d8d; text-decoration: none; margin-right: 14px; }
+.legal a:hover { color: var(--red); }
+
+.page { padding: 48px 0 24px; }
+.page h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.page p { color: #c8c8c8; max-width: 40em; }
+table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
+td a { color: var(--red); }
 
 @media (max-width: 720px) {
-  .intro, .foot-grid, .site-header { display: block; }
-  .download { display: inline-block; margin: 14px 0 0; }
-  .site-header nav { margin-top: 12px; }
-  .intro h1 { font-size: 38px; }
-  .logo-lockup img { height: 36px; }
+  .bar { display: block; }
+  .bar nav { margin-top: 14px; gap: 18px; }
+  .cards { grid-template-columns: 1fr; }
+  .hero { padding-top: 56px; }
+  .hero-mark { width: 120px; }
 }
