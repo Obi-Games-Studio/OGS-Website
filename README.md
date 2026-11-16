@@ -1,6 +1,6 @@
 # Obi Games Studio
 
-![Obi Games Studio](assets/logo.png)
+![Obi Games Studio](assets/wordmark.png)
 
 Website for Obi Games Studio, Casablanca. Open `index.html`.
 

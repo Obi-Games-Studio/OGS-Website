@@ -1,16 +1,16 @@
 :root {
-  --paper: #f4f1ea;
-  --ink: #1c1b19;
-  --muted: #5e5a54;
-  --line: #d9d3c8;
-  --red: #e23b2f;
+  --bg: #050505;
+  --ink: #f3f0ea;
+  --muted: #9c968e;
+  --line: rgba(255, 255, 255, 0.14);
+  --red: #fe4c3c;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -35,29 +35,23 @@ a:hover { color: var(--red); }
   display: flex;
   align-items: center;
   gap: 28px;
-  padding: 18px 0;
+  padding: 16px 0;
 }
-.logo-lockup {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  font-weight: 650;
-}
-.logo-lockup img { width: 42px; height: 42px; }
+.logo-lockup { display: block; text-decoration: none; }
+.logo-lockup img { height: 46px; width: auto; }
 .site-header nav { display: flex; gap: 18px; }
 .site-header nav a { text-decoration: none; }
 .download {
   margin-left: auto;
   text-decoration: none;
-  background: var(--ink);
-  color: var(--paper);
+  color: var(--red);
+  border: 1px solid var(--red);
   padding: 8px 12px;
   font-size: 14px;
 }
-.download:hover { color: white; background: #000; }
+.download:hover { color: #fff; background: var(--red); }
 
-.intro { padding: 54px 0 28px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; }
+.intro { padding: 54px 0 28px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 40px; align-items: center; }
 .intro h1 {
   font-family: Georgia, "Iowan Old Style", Palatino, serif;
   font-weight: 500;
@@ -66,8 +60,8 @@ a:hover { color: var(--red); }
   margin: 0 0 14px;
 }
 .intro p { margin: 0; max-width: 38em; }
-.mark-note { color: var(--muted); font-size: 14px; padding-top: 8px; }
-.mark-note img { width: 120px; height: 120px; margin-bottom: 8px; }
+.mark-note { color: var(--muted); font-size: 14px; }
+.mark-note img { width: 180px; height: auto; margin-bottom: 8px; }
 
 .rule { border: 0; border-top: 1px solid var(--line); margin: 8px 0 0; }
 
@@ -78,22 +72,22 @@ a:hover { color: var(--red); }
   font-size: 28px;
   margin: 0 0 8px;
 }
-.meta { color: var(--muted); margin: 0 0 14px; font-size: 15px; }
+.meta { color: var(--red); margin: 0 0 14px; font-size: 15px; }
 
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { font-size: 13px; color: var(--muted); font-weight: 600; }
-td a { font-weight: 600; }
+td a { font-weight: 600; color: var(--red); }
 
 .note { color: var(--muted); font-size: 15px; }
 
 .footer {
   margin-top: 20px;
   padding: 28px 0 40px;
-  border-top: 1px solid var(--ink);
+  border-top: 1px solid var(--line);
 }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 24px; }
-.footer h3 { margin: 0 0 8px; font-size: 14px; }
+.footer h3 { margin: 0 0 8px; font-size: 14px; color: var(--red); }
 .footer ul { list-style: none; margin: 0; padding: 0; }
 .footer li { margin: 5px 0; }
 .footer a { text-decoration: none; }
@@ -117,4 +111,5 @@ td a { font-weight: 600; }
   .download { display: inline-block; margin: 14px 0 0; }
   .site-header nav { margin-top: 12px; }
   .intro h1 { font-size: 38px; }
+  .logo-lockup img { height: 36px; }
 }
