@@ -4,63 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Obi Games Studio</title>
-  <meta name="description" content="Obi Games Studio, Casablanca. Established 2022. Upcoming game: Ashfall: The Beginning.">
+  <meta name="description" content="Obi Games Studio is an independent game studio established in 2022 in Casablanca, Morocco. Publishing in 2030 and 2035.">
   <link rel="icon" href="assets/mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="bar">
-    <a class="brand" href="index.html">
-      <img src="assets/mark-white.png" alt="">
-      <img class="brand-name" src="assets/wordmark.png" alt="OBI GAMES STUDIO">
-    </a>
-    <nav>
-      <a href="#games">Games</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt=""><img class="word" src="assets/wordmark.png" alt="Obi Games Studio"></a>
+      <nav class="nav-links">
+        <a href="#game">Games</a>
+        <a href="store.html">Store</a>
+        <a href="#studio">Studio</a>
+        <a href="#publishing">Publishing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <img class="hero-mark" src="assets/mark.png" alt="">
-      <h1><img src="assets/wordmark.png" alt="OBI GAMES STUDIO"></h1>
-      <p class="tagline">Games that pull you in</p>
-      <a class="cta" href="#contact">Get in touch</a>
-    </section>
-
-    <section class="band" id="games">
-      <h2>Games</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-art">
-            <img src="assets/mark.png" alt="">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Casablanca · Est. 2022</p>
+          <h1>Obi Games<span>Studio</span></h1>
+          <p class="lede">An independent studio in Casablanca, Morocco, making its upcoming games for release in 2030 and 2035.</p>
+          <div class="actions">
+            <a class="btn" href="#game">Ashfall: The Beginning</a>
+            <a class="btn ghost" href="downloads/Obi-Games-Launcher.exe">Download launcher</a>
           </div>
-          <h3>Ashfall: The Beginning</h3>
-          <p>Not for sale yet. Publishing window 2030.</p>
-          <p class="card-links">
-            <a href="store.html">Store</a>
-            <a href="downloads/Obi-Games-Launcher.exe">Download launcher</a>
-          </p>
-        </article>
+        </div>
+        <img class="hero-mark" src="assets/mark.png" alt="Obi Games Studio mark">
       </div>
     </section>
 
-    <section class="band" id="about">
-      <h2>About</h2>
-      <p>Obi Games Studio was established in 2022 in Casablanca, Morocco. Publishing windows are 2030 and 2035.</p>
+    <div class="band">
+      <div class="wrap">
+        <div><strong>2022</strong><span>Established</span></div>
+        <div><strong>Casablanca</strong><span>Morocco</span></div>
+        <div><strong>2030 / 2035</strong><span>Publishing</span></div>
+      </div>
+    </div>
+
+    <section id="game">
+      <div class="game">
+        <img class="game-art" src="assets/ashfall.png" alt="Ashfall: The Beginning">
+        <div class="game-copy">
+          <p class="section-label">Upcoming</p>
+          <h2>Ashfall<em>: The Beginning</em></h2>
+          <span class="tag">Not for sale yet</span>
+          <p>Ashfall: The Beginning is the game in development. It is not out. The first publishing window is 2030, and the later one is 2035.</p>
+          <p><a href="store.html">See it in the store</a> · <a href="downloads/Obi-Games-Launcher.exe">Download the launcher for Windows</a></p>
+        </div>
+      </div>
     </section>
 
-    <section class="band" id="contact">
-      <h2>Contact</h2>
-      <p>Casablanca, Morocco. There is no public email on this site.</p>
-      <p><a href="downloads/Obi-Games-Launcher.exe">Download launcher</a></p>
+    <section class="studio" id="studio">
+      <div class="wrap">
+        <p class="section-label">The studio</p>
+        <h2>Built in Casablanca.</h2>
+        <div class="studio-grid">
+          <article class="card">
+            <h3>Since 2022</h3>
+            <p>Obi Games Studio was established in 2022. The work now is the games that follow, not a catalog of shipped titles.</p>
+          </article>
+          <article class="card">
+            <h3>Morocco</h3>
+            <p>The studio is based in Casablanca. That is the home of the company, from first production through publishing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="publish" id="publishing">
+      <div class="wrap">
+        <p class="section-label">Publishing</p>
+        <h2>Two release windows.</h2>
+        <div class="year-grid">
+          <article class="year">
+            <b>2030</b>
+            <p>First publishing window for the studio’s upcoming games.</p>
+          </article>
+          <article class="year">
+            <b>2035</b>
+            <p>Second publishing window. Ashfall: The Beginning is the game in development now.</p>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-foot">
-    <p>2026 OBI GAMES STUDIO</p>
-    <p class="legal"><a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a></p>
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><img class="mark" src="assets/mark.png" alt=""><img class="word" src="assets/wordmark.png" alt="Obi Games Studio"></a>
+          <p>Independent game studio<br>Casablanca, Morocco<br>Established 2022</p>
+        </div>
+        <div>
+          <h3>Games</h3>
+          <ul>
+            <li><a href="#game">Ashfall: The Beginning</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="downloads/Obi-Games-Launcher.exe">Download launcher</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Studio</h3>
+          <ul>
+            <li><a href="#studio">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/Obi-Games-Studio">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal-bar">
+        <span>© 2026 Obi Games Studio. All rights reserved.</span>
+        <span>Casablanca, Morocco</span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
