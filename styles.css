@@ -40,8 +40,7 @@ a:hover { color: var(--red); }
 }
 .nav .wrap { display: flex; align-items: center; gap: 28px; }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 600; letter-spacing: 0.14em; font-size: 14px; }
-.brand img.mark { width: 36px; height: 36px; object-fit: contain; }
-.brand img.word { width: auto; height: 14px; }
+.brand img { width: 36px; height: 36px; object-fit: contain; }
 .nav-links { display: flex; gap: 22px; margin-left: auto; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .nav-links a:hover { color: var(--text); }
 
@@ -88,7 +87,9 @@ h1, h2, h3 { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; font-w
 .hero-mark {
   justify-self: end;
   width: min(320px, 100%);
-  height: auto;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  background: #000 url("assets/logo.png") center / 78% no-repeat;
 }
 
 .band {
@@ -113,12 +114,8 @@ section { padding: 96px 0; }
   background: #000;
 }
 .game-art {
-  width: 100%;
-  height: 100%;
+  background: #000 url("assets/redline.jpg") right center / cover no-repeat;
   min-height: 420px;
-  object-fit: contain;
-  background: #000;
-  padding: 48px;
 }
 .game-copy { padding: 72px 56px; display: flex; flex-direction: column; justify-content: center; }
 .game-copy h2 { font-size: clamp(56px, 7vw, 88px); line-height: 0.9; text-transform: uppercase; }
@@ -173,14 +170,11 @@ section { padding: 96px 0; }
 .page { padding: 72px 0 96px; }
 .page h1 { font-size: 64px; text-transform: uppercase; margin-bottom: 12px; }
 .page p { max-width: 680px; color: #d8d2cc; }
-.store-logo { width: min(640px, 100%); margin: 12px 0 24px; background: #000; }
-.page .btn { margin: 8px 0 18px; }
 
 @media (max-width: 860px) {
   .hero-grid, .game, .studio-grid, .year-grid, .footer-grid, .band { grid-template-columns: 1fr; }
   .hero-mark { justify-self: start; width: 180px; }
-  .game-copy { padding: 40px 24px 64px; }
-  .game-art { padding: 28px; }
+  .game-copy { padding: 40px 0 64px; }
   .nav { height: auto; }
   .nav .wrap { flex-wrap: wrap; padding: 12px 0; }
   .nav-links { margin-left: 0; gap: 14px; font-size: 12px; }
